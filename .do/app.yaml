@@ -1,0 +1,15 @@
+name: cloud-computing-demo
+region: nyc
+
+services:
+  - name: web
+    environment_slug: node-js
+    github:
+      repo: MarkiyanFostyak/cloud-computing-demo-2026
+      branch: main
+      deploy_on_push: true
+    source_dir: /
+    run_command: npm start
+    http_port: 8080
+    instance_count: 1
+    instance_size_slug: basic-xxs
